@@ -4,7 +4,6 @@ import google.generativeai as genai
 from gtts import gTTS
 import pygame
 
-pygame.mixer.init()
 
 # Function to generate chatbot response
 def chatbot_response(user_input):
@@ -114,15 +113,8 @@ def main():
             st.session_state.messages.append(("bot", bot_response, current_time))
 
             # Clear the input box by resetting session state
-            tts = gTTS(bot_response, lang='en')
-            tts.save("output.mp3")
-            pygame.mixer.music.load("output.mp3")
-            pygame.mixer.music.play()
-
             st.session_state.user_input = ""
 
-while pygame.mixer.music.get_busy():
-    pass
 
 if __name__ == "__main__":
     main()
