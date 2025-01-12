@@ -2,3 +2,4 @@ streamlit
 datetime
 google.generativeai
 pygame
+gTTS
