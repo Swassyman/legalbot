@@ -1,0 +1,4 @@
+streamlit
+datetime
+google.generativeai
+pygame
